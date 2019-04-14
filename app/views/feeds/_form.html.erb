@@ -1,6 +1,6 @@
 <%= form_with(model: feed, local: true) do |form| %>
   <% if feed.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-danger" role="alert">
       <h2><%= pluralize(feed.errors.count, "error") %> prohibited this feed from being saved:</h2>
 
       <ul>
@@ -11,13 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :image %>
+  <div class="field mt-3">
+    <%= form.label :image %><br />
     <%= form.file_field :image %>
     <%= form.hidden_field :image_cache %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions mt-2">
+    <%= form.submit class:"btn btn-primary" %>
   </div>
 <% end %>

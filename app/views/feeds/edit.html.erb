@@ -2,5 +2,7 @@
 
 <%= render 'form', feed: @feed %>
 
-<%= link_to 'Show', @feed %> |
-<%= link_to 'Back', feeds_path %>
+<div class="mt-5">
+  <%= link_to 'Show', @feed , class:"btn btn-info" %> |
+  <%= link_to 'Back', feeds_path, class:"btn btn-light" %>
+</div>

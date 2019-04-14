@@ -5,5 +5,8 @@
   <%= image_tag @feed.image.url %>
 </p>
 
-<%= link_to 'Edit', edit_feed_path(@feed) %> |
-<%= link_to 'Back', feeds_path %>
+<div class="mt-5">
+  <%= link_to 'Edit', edit_feed_path(@feed), class:"btn btn-secondary" %> |
+  <%= link_to 'Destroy', @feed, method: :delete, data: { confirm: '本当に削除してもよいですか?' }, class:"btn btn-danger" %> |
+  <%= link_to 'Back', feeds_path, class:"btn btn-light" %>
+</div>
