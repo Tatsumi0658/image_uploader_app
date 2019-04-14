@@ -2,7 +2,10 @@
 
 <h1>Feeds</h1>
 
-<div class="row">
+<p>
+  Feedsは画像投稿サイトです
+  </p>
+<div class="row mt-5">
   <% @feeds.each do |feed| %>
     <div class="col-md-4 mb-3 text-center">
       <%= link_to image_tag(feed.image.url), feed %>
@@ -11,4 +14,4 @@
 </div>
 <br>
 
-<%= link_to 'New Feed', new_feed_path, class:"btn btn-success" %>
+<%= link_to 'Add Photo', new_feed_path, class:"btn btn-success" %>
