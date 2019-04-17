@@ -1,10 +1,10 @@
 # config valid only for current version of Capistrano
 lock '3.6.0'
 
-set :application, 'image_upload_app'
-set :repo_url, 'https://github.com/Tatsumi0658/image_upload_app'
+set :application, 'image_uploader_app'
+set :repo_url, 'https://github.com/Tatsumi0658/image_uploader_app'
 
-set :deply_to, '/var/www/image_upload_app'
+set :deply_to, '/var/www/image_uploader_app'
 
 set :linked_files, %w{.env config/secrets.yml}
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/uploads}
